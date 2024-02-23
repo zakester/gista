@@ -1,3 +1,3 @@
 @echo off
-go build main.go
-main.exe
+go build -o gista.exe ./src/ 
+gista.exe
