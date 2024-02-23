@@ -47,7 +47,7 @@ func Authors() []Author {
 }
 
 func ChangesInit(author *Author) {
-	cmd := exec.Command("git", "log", "--numstat", "--pretty=\"%s\"", "--author=" + author.Name)
+	cmd := exec.Command("git", "log", "--numstat", "--pretty=\"%s\"", "--author="+author.Name)
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
@@ -74,8 +74,8 @@ func ChangesInit(author *Author) {
 				return
 			}
 
-      author.Insertions += insertions
-      author.Deletions += deletions
+			author.Insertions += insertions
+			author.Deletions += deletions
 		}
 	}
 }
